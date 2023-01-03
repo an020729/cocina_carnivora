@@ -1,0 +1,28 @@
+{% extends 'homepage/base.html' %}
+{% block title %}
+  Registro de usuarios
+{% endblock %}
+{% block content %}
+{% load static %}
+
+<div class="d-flex p-5 justify-content-start w-100 h-100" style="background-image:url({% static 'img/fondo-login.jpg' %}); background-size: cover; background-repeat:no-repeat;"> 
+    <!--<img class="img-fluid h-100 w-100" src="{% static 'img/fondo-login.jpg' %}" alt="" style="position: relative;"> -->
+  <div class="py-5">
+    <form method="post" class="bg-light row p-5 col-lg-5 border boder-primary rounded shadow-lg mt-5 ms-md-5">
+      <h3 class="row p-lg-3 justify-content-center">Registrate</h3>
+      {% csrf_token %}
+      {% for field in form %}
+        <div class="form-group p-2" >
+        {{ field.label_tag }}
+        {{ field }}
+        {% if field.errors %}
+          {{ field.errors }}
+        {% endif %}
+        </div>
+      {% endfor %}
+      <button type="submit" class="btn btn-success mt-2">Registrarme</button>
+      <a class='row-2 btn btn-danger p-2 mt-2' href={% url 'home' %}>Cancelar</a>
+    </form>
+  </div> 
+</div>
+{% endblock %}

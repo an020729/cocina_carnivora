@@ -1,0 +1,15 @@
+{% extends "homepage/base.html" %}
+{% block content %}
+<div class="d-flex items-aling-center justify-content-center pt-5">
+    <form class="row-2 p-5 m-5 border border-dark rounded" action="/" method="POST" enctype="multipart/form-data">
+        
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="d-flex items-aling-center justify-content-center pt-2">
+            <input type="submit" class="btn btn-success" value="Registrar perfil" />
+        </div>
+    </form>
+
+</div>
+
+{% endblock %}

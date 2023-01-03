@@ -1,0 +1,131 @@
+{% load static %}
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="mainNav">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}"
+      >
+    <p>Cocina carnivora</p>
+    </a>
+      {% if user.is_authenticated %}
+      <div class="bg-dark text-light text-uppercase ms-4 ">
+        <a class="nav-link" href="#services"><i class="fa-solid fa-user me-2"></i>{{user.username}}</a>
+      </div>
+     {% endif %}
+ 
+     <button
+    class="navbar-toggler cerrar"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#navbarResponsive"
+    aria-controls="navbarResponsive"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+    >
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto py-4 py-lg-0">
+        {% if user.is_authenticated %}
+         
+          
+         <!--  {% if 'Cuidador' in role %}
+	     <li class="nav-item">
+	       <a class="nav-link" href="{% url 'sitter_list' %}">Ver otros cuidadores</a>
+            </li> -->
+        
+           <!--  <li class="nav-item">
+	      <a class="nav-link disabled" href="#">Convertirse en cuidador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Registrar perro</a>
+            </li> 
+          {% endif %}   -->
+          
+          {% if 'Dueño' in role %}
+	       <li class="nav-item">
+	       <a class="nav-link" href="
+         #">Ver recetas</a>
+            </li>
+        
+	  <li class="nav-item">
+              <a class="nav-link disabled" href="#"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#"></a>
+          </li> 
+	  {% endif %}
+         
+          {% if 'Invitado' in role %}
+	       <li class="nav-item">
+	       <a class="nav-link" href="#">Ver recetas</a>
+            </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Convertirse en cuidador</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+            >Registrar perro</a>
+          </li>
+          {% endif %}  
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ayuda</a>
+            </li>
+    
+            
+            
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Ver perfil 
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{% url 'useraccount:editpro' %}">Editar cuenta</a></li>
+            <li><a class="dropdown-item" href="{% url 'useraccount:password' %}">Cambiar password</a></li>
+            <li><a class="dropdown-item" href="{% url 'useraccount:editprofile' user.id %}">Editar Perfil</a></li>
+              
+          </ul>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'useraccount:logout' %}"><i class="fa-solid fa-arrow-right-from-bracket pe-2"></i>Salir</a>
+        </li>
+        
+        
+        
+        {% else %}
+        
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ver recetas</a>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link" href="{% url 'useraccount:register' %}">Registrarme</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'useraccount:login' %}">Iniciar sesión</a>
+        </li>
+        {% comment %} <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Ayuda</a>
+        </li> {% endcomment %}
+        {% endif %}
+      </ul>
+    </div>
+  </div>
+ 
+<script>
+  $(document).click(function (event) {
+
+  /// If *navbar-collapse* is not among targets of event
+  if (!$(event.target).is('.navbar-collapse')) {
+
+    /// Collapse every *navbar-collapse*
+    $('.navbar-collapse').collapse('hide');
+
+  }
+}); 
+</script>
+  <script src="https://kit.fontawesome.com/ef04847ec0.js" crossorigin="anonymous"></script>
+</nav>

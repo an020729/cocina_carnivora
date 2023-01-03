@@ -1,0 +1,259 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+{% block title %}
+    Cocina carnivora
+{% endblock %}
+{% block content %}
+
+
+	      
+  <img class="img-fluid h-100 w-100" src="{% static 'img/beef_home.jpg' %}" alt="">
+
+      {% if user.is_authenticated %}
+    <!--========================================================== -->
+		<!-- Pantalla de Bienvenida-->
+    <!--========================================================== -->
+<div class="container h-100 mb-5" style="width: 80%;">
+
+     <div class="row mt-4">
+       <h3> Bienvenido/a <span style="color: #6b8cff;">{{user.username}}</span></h3>
+    </div>
+
+<div class="row mt-2 p-2">
+	    <h5> Ya podés:</h5>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-1 col-sm-12">
+       <img class="p-2" src="{% static 'img/numero_1.png' %}">
+      </div>
+
+<div class="col-md-3 col-sm-12">
+  <div class="row p-2">
+          <a class="nav-link" href="#">
+	<h5>Crear recetas</h5>
+	    </a>
+      </div>
+      <div class="row py-2">
+	  <p> Tienes una receta que no tenemos en el sitio ? publica tus propias recetas y comportila con miles de usuarios.</p>
+      </div>
+</div>
+<div class="col-md-1 col-sm-12">
+  <img class="p-2" src="{% static 'img/numero_2.png' %}">
+
+</div>
+
+<div class="col-md-3 col-sm-12">
+  <div class="row p-2">
+          <a class="nav-link" href="#">
+	<h5>Leer recetas de otros</h5>
+	    </a>
+    </div>
+  <div class="row py-2">
+	<p>Ya estas listo(a) para crear deliciosas comidas a partir de recetas de otros usuarios de nuestra comunidad</p>
+      </div>
+</div>
+
+<!-- <div class="col-md-1 col-sm-12">
+	<img class="p-2" src="{% static 'img/numero_3.png' %}">
+</div> -->
+
+<!-- <div class="col-lg-3 col-sm-12">
+
+  <div class="row p-2">
+          <a class="nav-link" href="#">
+	  <h5>Buscar hospedaje para tu perro</h5>
+	    </a>
+      </div>
+    <div class="row py-2">
+	<p>Encontrá al cuidador adecuado para tu perro y paga on-line para contar con la cobertura veterinaria.</p>
+    </div>
+</div> -->
+
+</div>
+
+</div>
+
+
+
+
+        {% else %}
+    <!--========================================================== -->
+		<!-- ¿Cómo funciona? Y ¿ Por Qué Carn?-->
+    <!--========================================================== -->
+  <div class="container h-100" style="width: 80%;">
+
+    <div class="row mt-4 p-2">
+	    <h3>¿Cómo funciona Cocina carnivora?</h3>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-1 col-sm-12">
+       <img class="p-2" src="{% static 'img/numero_1.png' %}">
+      </div>
+
+<div class="col-md-3 col-sm-12">
+  <div class="row p-2">
+	<h5>Registrate</h5>
+      </div>
+      <div class="row p-2">
+	  <p>Registrate como primer paso para comenzar a disfrutar de nuestro amplio catalogo de recetas</p>
+      </div>
+</div>
+<div class="col-md-1 col-sm-12">
+  <img class="p-2" src="{% static 'img/numero_2.png' %}">
+
+</div>
+
+<div class="col-md-3 col-sm-12">
+  <div class="row p-2">
+	<h5>Busca recetas</h5>
+    </div>
+  <div class="row p-2">
+	<p>Encuentra las mejores recetas de carnes de todo internet.</p>
+      </div>
+</div>
+
+<div class="col-md-1 col-sm-12">
+	<img class="p-2" src="{% static 'img/numero_3.png' %}">
+</div>
+
+<div class="col-lg-3 col-sm-12">
+
+  <div class="row">
+	  <h5>Sigue los pasos</h5>
+      </div>
+    <div class="row">
+	<p>Sigue los pasos de cada una de nuestras recetas y crea platos increibles</p>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+
+
+  <div class="container" style="width: 80%;">
+
+<div class="row mt-4 p-2">
+	<h3>¿Por qué Cocina carnivora?</h3>
+</div>
+
+<div class="row mt-3">
+<div class="col-md-1 col-sm-12">
+  <img class="p-2" src="{% static 'img/beneficio.png' %}">
+</div>
+
+<div class="col-md-3 col-sm-12">
+  <div class="row p-2">
+	<h5>Beneficios para tu cocina</h5>
+      </div>
+      <div class="row p-2">
+	<ul>
+	  <li>Cada dia son mas recetas las que se publican</li>
+	  <li>Diversifica tu dieta y estilo de comidas</li>
+	  
+
+	</ul>	
+      </div>
+</div>
+<div class="col-md-1 col-sm-12">
+  <img class="p-2" src="{% static 'img/beneficio.png' %}">
+
+</div>
+
+<div class="col-md-3 col-sm-12">
+  <div class="row p-2">
+	<h5>Beneficios para vos</h5>
+    </div>
+  <div class="row p-2">
+	<ul>
+	  <li>+15.000 recetas creadas</li>
+	  
+	</ul>	
+
+
+      </div>
+</div>
+
+<div class="col-md-1 col-sm-12">
+  <img class="p-2" src="{% static 'img/beneficio.png' %}">
+  
+</div>
+
+<div class="col-md-3 col-sm-12">
+
+  <div class="row">
+	  <h5>Tranquilidad</h5>
+      </div>
+    <div class="row">
+	<ul>
+	  <li>Resuelve tus comidas de manera sencilla</li>
+	  <li>Te sobrara el tiempo para invertir en otras recetas</li>
+	  
+
+	</ul>	
+    </div>
+</div>
+</div>
+</div>
+
+        {% endif %}
+    
+
+    <!--========================================================== -->
+		<!-- Preguntas Frecuentes -->
+    <!--========================================================== -->
+
+
+
+  <div class="container p-4 my-5 min-vh-100 w-74">
+
+<div class="mt-4 p-2 text-center">
+  <h3 class="font-weight-bold">Preguntas Frecuentes (FAQ)</h3>
+</div>
+<ul>  <div class="p-2">
+    <li><h5 class="font-weight-bold">¿Qué tipos de carne se pueden usar en estas recetas?</h5> </li>	
+      </div>
+      <div>
+	  <p class="text-justify">Dependiendo de la receta, se pueden usar diferentes tipos de carne, como pollo, cerdo, ternera, cordero, pato, conejo, etc. También se pueden utilizar diferentes cortes de carne, como filetes, lomo, chuletas, etc.
+	</p>
+      </div>
+
+  <div class="p-2">
+	<li><h5 class="font-weight-bold">¿Cómo se deben preparar y cocinar los diferentes cortes de carne?</h5></li>	
+      </div>
+      <div>
+	<p class="text-justify">La forma en que se deben preparar y cocinar los diferentes cortes de carne depende del tipo de carne y del corte en particular. Algunos cortes de carne, como el lomo y el filete, se pueden cocinar a altas temperaturas durante cortos períodos de tiempo para obtener un resultado rojo y jugoso. Otros cortes, como el paletilla y el guisote, se deben cocinar a temperaturas más bajas durante períodos más largos para obtener un resultado más tierno. Es importante seguir las instrucciones de la receta y utilizar un termómetro de cocina para asegurarse de que la carne se cocine a la temperatura adecuada.
+	    
+	</p>
+      </div>
+
+
+  <div class="p-2">
+	<li><h5 class="font-weight-bold">¿Cuáles son las mejores técnicas de cocción para diferentes tipos de carne?</h5></li>	
+      </div>
+      <div class="">
+	<p class=""text-justify>Algunas de las mejores técnicas de cocción para diferentes tipos de carne incluyen:
+
+    Asado: se trata de cocinar la carne en un horno o en la parrilla a altas temperaturas durante cortos períodos de tiempo. El asado es ideal para cortes gruesos y tiernos como el lomo y el filete.
+    
+    Estofado: se trata de cocinar la carne en una cacerola a fuego lento con suficiente líquido para que quede tierna. El estofado es ideal para cortes más duros y menos tiernos como el guisote y la paletilla.
+    
+    A la parrilla: se trata de cocinar la carne en una parrilla a fuego medio o alto durante cortos períodos de tiempo. La parrilla es ideal para cortes gruesos y tiernos como el lomo y el filete.
+    
+    A la plancha: se trata de cocinar la carne en una sartén caliente durante cortos períodos de tiempo. La plancha es ideal para cortes delgados y tiernos como el filete y el lomo.
+    
+    A la brasa: se trata de cocinar la carne en una parrilla a fuego lento durante períodos más largos de tiempo. La brasa es ideal para cortes gruesos.
+	    
+	</p>
+
+      </div>
+
+</ul>
+  
+  
+<p><a href="#">Lee más Preguntas Frecuentes (FAQ) en nuestro Centro de ayuda</a></p>
+  </div>
+   {% endblock %}

@@ -1,0 +1,81 @@
+{% load static %}
+   <footer>
+          <div class="container-fluid text-white p-5" style="background-color:#926911" >
+            <div class="mx-auto">
+            <!-- cocina carnivora  menu-->
+            <div class="row">
+              <div class="col-md-4">
+                <div class="mw-100">
+                  <div class="text-left py-2">
+                    <h5>Cocina Carnivora</h5>
+                  </div>
+                <ul style="list-style: none; margin:0; padding: 0;">
+                  <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="{% url 'home' %}">Inicio</a></li>
+	         <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#">Ayuda</a></li>
+
+        {% if user.is_authenticated %}
+         
+          {% if 'Cuidador' in role %}
+	           <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#">Ver otros cuidadores</a></li>
+	                   
+
+          {% endif %}  
+          
+          {% if 'Dueño' in role %}
+	
+	           <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#">Ver recetas</a></li>
+	  {% endif %}
+         
+          {% if 'Invitado' in role %}
+          
+	           <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#">Ver recetas</a></li>
+	           <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#">Convertirse en cuidador</a></li>
+	           <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#">Registrar canino</a></li>
+
+	  {% endif %}  
+
+        {% else %}
+	  
+	<li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#">Ver recetas</a></li>
+	
+	<li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="{% url 'useraccount:login' %}">Iniciar sesion</a></li>
+	
+      
+             <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="{% url 'useraccount:register' %}">Registrarme</a></li>
+         
+        
+
+	{% endif %}
+                </ul>
+                </div>
+              </div>
+              <div class="col-md-4 ">
+                <div class="text-left py-2">
+                  <h5>Terminos y Condiciones</h5>
+                  <h6 class="py-2">Politicas de privacidad</h6>
+                </div>
+                <div class="container-fluid ">
+                  <!-- redes sociales -->
+                  <div class="row">
+                    <div class="col-4">
+                      <!-- <a href="#"><img src=""> </a> -->
+                   </div>
+                    <div class="col-4">
+                      <!-- <a href="#"><img src="#"> </a> -->
+                    </div>
+                    <div class="col-4">
+                      <!-- <a href="#"><img src="#"> </a> -->
+                    </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-md-4 text-left py-2">
+            <h5>Descarga nuestra aplicacion</h5>
+	    <!-- <a href="#"><img style= "max-width: 220px; padding: 5px;" src="#"></a>
+	    <a href="#"><img style= "max-width: 200px; padding: 5px;" src="#"></a> -->
+
+          </div>
+        </div>
+           
+      </footer>
+    
