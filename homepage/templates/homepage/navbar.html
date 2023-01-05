@@ -29,27 +29,13 @@
         {% if user.is_authenticated %}
          
           
-         <!--  {% if 'Cuidador' in role %}
-	     <li class="nav-item">
-	       <a class="nav-link" href="{% url 'sitter_list' %}">Ver otros cuidadores</a>
-            </li> -->
-        
-           <!--  <li class="nav-item">
-	      <a class="nav-link disabled" href="#">Convertirse en cuidador</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">Registrar perro</a>
-            </li> 
-          {% endif %}   -->
-          
           {% if 'Dueño' in role %}
 	       <li class="nav-item">
-	       <a class="nav-link" href="
-         #">Ver recetas</a>
+	       <a class="nav-link" href="{% url 'get_recipes' %}">Ver recetas</a>
             </li>
         
 	  <li class="nav-item">
-              <a class="nav-link disabled" href="#"></a>
+              <a class="nav-link" href="{% url 'create_recipe' %}">Crear receta</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#"></a>
@@ -58,21 +44,19 @@
          
           {% if 'Invitado' in role %}
 	       <li class="nav-item">
-	       <a class="nav-link" href="#">Ver recetas</a>
+	       <a class="nav-link" href="{% url 'get_recipes' %}">Ver recetas</a>
             </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Convertirse en cuidador</a>
+            <a class="nav-link" href="#"></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"
-            >Registrar perro</a>
-          </li>
+          
+          
+          
+          
           {% endif %}  
 
-            <li class="nav-item">
-              <a class="nav-link" href="#">Ayuda</a>
-            </li>
+          
     
             
             
@@ -99,7 +83,7 @@
         
         
         <li class="nav-item">
-          <a class="nav-link" href="#">Ver recetas</a>
+          <a class="nav-link" href="{% url 'get_recipes' %}">Ver recetas</a>
         </li>
        <li class="nav-item">
           <a class="nav-link" href="{% url 'useraccount:register' %}">Registrarme</a>
@@ -108,7 +92,7 @@
           <a class="nav-link" href="{% url 'useraccount:login' %}">Iniciar sesión</a>
         </li>
         {% comment %} <li class="nav-item">
-          <a class="nav-link" href="#portfolio">Ayuda</a>
+          <a class="nav-link" href="{% url 'create_recipe' %}">Crear receta</a>
         </li> {% endcomment %}
         {% endif %}
       </ul>

@@ -16,7 +16,6 @@ class Profile(models.Model):
     photo         = models.ImageField('User profile',upload_to="users/",
                                       null=True, blank=True)
     stars_average = models.IntegerField(default=0)
-    rate_average = models.IntegerField(default=0)
     user_role     = models.IntegerField(choices=USER_ROLES, default=2)
     user          = models.OneToOneField(User, on_delete=models.CASCADE)
 

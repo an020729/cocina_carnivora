@@ -15,11 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from cocina_carnivora import settings
 from useraccount import urls
 from homepage import urls
+from recipes import urls
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('homepage.urls')),
     path('accounts/', include('useraccount.urls')),
-]
+    path('recipe/',include('recipes.urls')),
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

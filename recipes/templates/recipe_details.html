@@ -1,0 +1,34 @@
+{% extends "homepage/base.html" %}
+{% load static %}
+{% block title %}
+Detalle de la receta
+{% endblock %}
+{% block content %}
+
+
+
+<div class="d-flex p-5 justify-content-start w-100 h-100">
+
+  <!--<div class="container-fluid mt-5 card  "> -->
+  <div class="container mt-5">
+    <div class="card shadow bg-light rounded">
+      <h5 class="p-3 mb-3 card-title bg-dark text-white text-center">Detalles de la receta</h5>
+
+      <div class="container mx-3">
+        <p class="card-title">Titulo:</p>
+        <div class="card border-dark mb-3 p-2" style="max-width: 80%;">
+          <p class="card-text">{{details.title}}</p>
+        </div>
+        <p class="card-text">Nombre del autor: <b>&nbsp; {{details.user_id}}</b></p>
+        <p class="card-text">Ingredientes: <b>{{ details.ingredients }}</b></p>
+        <p class="card-text">Pasos a seguir: <b>{{ details.preparation }}</b></p>
+        <img src="{{details.picture_recipe.url}}" class=" img-fluid rounded-start img-thumbnail" width="600"
+          height="300" alt="...">
+      </div>
+      <a class="btn btn-primary" href="{% url 'get_recipes' %}">Regresar</a>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'homepage/base.html' %} 
+{% load static %} 
+{% block title %}
+  Buscar Recetas
+{% endblock %}
+{% block content %} 
+
+ <br/>
+<br/> 
+<div class="d-flex justify-content-center pt-4">
+  <h1>Recetas</h1>
+</div>
+
+
+{% for r in recipes %}
+
+<div class="d-flex p-2 justify-content-start w-100 h-100"> 
+  <div class="container mt-5">
+  <div class="card bg-light rounded shadow">
+    <div class="row m-3">
+      <div class="col-md-4 bg-light">
+        <img src="{{r.picture_recipe.url}}" class="img-fluid rounded-start img-thumbnail" width="300" height="300" alt  ="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{r.title}} </h5>
+          <p class="card-text">{{r.ingredients}}</p>
+          <p class="card-text"><small class="text-muted">{{r.preparation}} </small></p>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            
+            
+            <a class="btn btn-primary" href="{% url 'detail_recipe' r.id %}">Ver receta</a> 
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</a>
+</div>
+</div>
+
+
+
+<script src="https://kit.fontawesome.com/ef04847ec0.js" crossorigin="anonymous"></script>
+{% endfor %} 
+<div class="d-flex pt-2 m-5">
+  <a class="btn btn-warning" href="{% url 'home' %}">Volver atras</a>
+</div>
+{% endblock content %}
