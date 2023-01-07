@@ -1,6 +1,6 @@
 # Cocina carnivora
 
-Servicio online Recetas Carnivoras. 
+Servicio online Recetas Carnivoras, para un estilo de vida carnivoro. 
 
 ## User story
 :point_right:
