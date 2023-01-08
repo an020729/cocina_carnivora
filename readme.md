@@ -2,6 +2,9 @@
 
 Servicio online Recetas Carnivoras. 
 
+
+[![Alt text](https://img.youtube.com/vi/https://youtu.be/mv-eYLR0f9E/0.jpg)](https://www.youtube.com/watch?v=https://youtu.be/mv-eYLR0f9E)
+
 ## User story
 :point_right:
 Como usuario puedo crear un perfil, modificar mi perfil , y lo mas importante crear recetas de mi preferencia y leer las de otros usuarios 
