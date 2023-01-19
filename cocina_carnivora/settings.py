@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'useraccount',
     'homepage',
     'recipes',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

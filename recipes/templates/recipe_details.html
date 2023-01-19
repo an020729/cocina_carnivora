@@ -20,12 +20,14 @@ Detalle de la receta
           <p class="card-text">{{details.title}}</p>
         </div>
         <p class="card-text">Nombre del autor: <b>&nbsp; {{details.user_id}}</b></p>
-        <p class="card-text">Ingredientes: <b>{{ details.ingredients }}</b></p>
-        <p class="card-text">Pasos a seguir: <b>{{ details.preparation }}</b></p>
+        <p class="card-text">Ingredientes: <b>{{ details.ingredients|safe }}</b></p>
+        <p class="card-text">Pasos a seguir: <b>{{ details.preparation|safe }}</b></p>
         <img src="{{details.picture_recipe.url}}" class=" img-fluid rounded-start img-thumbnail" width="600"
           height="300" alt="...">
       </div>
+      <br>
       <a class="btn btn-primary" href="{% url 'get_recipes' %}">Regresar</a>
+      
 
     </div>
   </div>

@@ -16,14 +16,14 @@
         {% if user.is_authenticated %}
          
           {% if 'Cuidador' in role %}
-	           <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#">Ver otros cuidadores</a></li>
+	           <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#"></a></li>
 	                   
 
           {% endif %}  
           
           {% if 'Dueño' in role %}
 	
-	           <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="#">Ver recetas</a></li>
+	           <li class="py-2"><a style="text-decoration:none; color: aliceblue;" href="{% url 'get_recipes' %}">Ver recetas</a></li>
 	  {% endif %}
          
           {% if 'Invitado' in role %}
@@ -71,9 +71,7 @@
           </div>
           <div class="col-md-4 text-left py-2">
             <h5>Descarga nuestra aplicacion</h5>
-	    <!-- <a href="#"><img style= "max-width: 220px; padding: 5px;" src="#"></a>
-	    <a href="#"><img style= "max-width: 200px; padding: 5px;" src="#"></a> -->
-
+	    
           </div>
         </div>
            

@@ -1,6 +1,6 @@
 # Cocina carnivora
 
-Servicio online Recetas Carnivoras, para un estilo de vida carnivoro. 
+Servicio online Recetas Carnivoras. 
 
 ## User story
 :point_right:
@@ -31,5 +31,5 @@ Como usuario puedo crear un perfil, modificar mi perfil , y lo mas importante cr
 
 
 ## Developer:
-- Andrea bentancourt 
+- Andrea bentancourt 
 :raising_hand:
