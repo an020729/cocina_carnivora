@@ -2,6 +2,9 @@
 
 Servicio online Recetas Carnivoras. 
 
+
+[![Alt text](https://img.youtube.com/vi/mv-eYLR0f9E/0.jpg)](https://www.youtube.com/watch?v=mv-eYLR0f9E)
+
 ## User story
 :point_right:
 Como usuario puedo crear un perfil, modificar mi perfil , y lo mas importante crear recetas de mi preferencia y leer las de otros usuarios 
@@ -31,5 +34,10 @@ Como usuario puedo crear un perfil, modificar mi perfil , y lo mas importante cr
 
 
 ## Developer:
+<<<<<<< HEAD
 - Andrea bentancourt 
 :raising_hand:
+=======
+- Andrea bentancourt 
+:raising_hand:
+>>>>>>> 3b0ff9df7b23d7a128b02e03387aabeeff2d5192
