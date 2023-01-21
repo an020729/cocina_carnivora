@@ -3,7 +3,7 @@
 Servicio online Recetas Carnivoras. 
 
 
-[![Alt text](https://img.youtube.com/vi/mv-eYLR0f9E/0.jpg)](https://www.youtube.com/watch?v=mv-eYLR0f9E)
+[![Alt text](https://img.youtube.com/vi/7IQdpi9YN1c/0.jpg)](https://www.youtube.com/watch?v=mv-7IQdpi9YN1c)
 
 ## User story
 :point_right:
